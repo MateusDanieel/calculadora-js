@@ -37,8 +37,24 @@
 
 .sec-main {
 
+    .alert {
+        background-color: rgba(#E21C34, .3);
+        border: 2px solid rgba(#500B28, .3);
+        padding: 20px;
+        margin: 30px 0 0;
+        color: #FFF;
+        font-size: 22px;
+        text-align: center;
+        width: 100%;
+        display: none;
+
+        b {
+            text-transform: uppercase;
+        }
+    }
+
     .calc {
-        margin: 60px auto 0;
+        margin: 30px auto 0;
         width: 100%;
         max-width: 300px;
 
@@ -79,7 +95,7 @@
                     cursor: auto;
                 }
 
-                &.clear, &.res {
+                &.clear, &.result {
                     width: 49%;
                     
                 }
@@ -88,7 +104,7 @@
                     
                 }
 
-                &.res {
+                &.result {
                     background-color: rgba(#4fe0b6, .5);
                     color:rgba(#FFF, 1);
                 }
@@ -116,6 +132,10 @@ body {
 
         .sec-main {
 
+            .alert {
+                color: rgba(#000, .6);
+            }
+
             .screen {
                 background-color: rgba(#000, .1);
                 color:rgba(#000, .7);
@@ -126,7 +146,7 @@ body {
                     background-color: rgba(#000, .1);
                     color:rgba(#000, .4);
 
-                    &.res {
+                    &.result {
                         background-color: rgba(#4fe0b6, .9);
                         color:rgba(#FFF, 1);
                     }
