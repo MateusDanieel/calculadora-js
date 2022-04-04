@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+.container {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+}
+
+.sec-navbar {
+    background-color: rgba(#000, .1);
+    height: 65px;
+
+    .container {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        min-height: 100%;
+    }
+
+    .bt {
+        background-color: transparent;
+        border: 0;
+        outline: none;
+        color: rgba(#FFF, .3);
+        cursor: pointer;
+    }
+}
+
+.sec-main {
+
+    .calc {
+        margin: 60px auto 0;
+        width: 100%;
+        max-width: 300px;
+
+        .screen {
+            width: 99%;
+            min-height: 54px;
+            background-color: rgba(#000, .3);
+            font-size: 30px;
+            word-wrap: break-word;
+            align-items: center;
+            justify-content: flex-end;
+            color: rgba(#FFF, .9);
+            border: 0;
+            margin: 0.5%;
+            outline: none;
+            font-weight: 700;
+            padding: 10px;
+            text-align: right;
+        }
+
+        .keys {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+
+            button {
+                font-size: 30px;
+                background-color: rgba(#000, .3);
+                border: 0;
+                width: 24%;
+                padding: 10px;
+                margin: 0.5%;
+                color:rgba(#FFF, .3);
+                cursor: pointer;
+                font-weight: 700;
+
+                &:disabled {
+                    cursor: auto;
+                }
+
+                &.clear, &.res {
+                    width: 49%;
+                    
+                }
+
+                &.clear {
+                    
+                }
+
+                &.res {
+                    background-color: rgba(#4fe0b6, .5);
+                    color:rgba(#FFF, 1);
+                }
+            }
+        }
+    }
+}
+
+body {
+
+    &.js-dark {
+        background: #333;
+    }
+    
+    &.js-clear {
+        background: #EEE;
+
+        .sec-navbar {
+            background-color: rgba(#000, .1);
+
+            .bt {
+                color: rgba(#000, .3);
+            }
+        }
+
+        .sec-main {
+
+            .screen {
+                background-color: rgba(#000, .1);
+                color:rgba(#000, .7);
+            }
+
+            .keys {
+                button {
+                    background-color: rgba(#000, .1);
+                    color:rgba(#000, .4);
+
+                    &.res {
+                        background-color: rgba(#4fe0b6, .9);
+                        color:rgba(#FFF, 1);
+                    }
+                }
+            }
+            
+        }
+    }
+}

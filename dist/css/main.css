@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inconsolata", monospace;
+}
+
+.container {
+  width: 100%;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.sec-navbar {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 65px;
+}
+.sec-navbar .container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  min-height: 100%;
+}
+.sec-navbar .bt {
+  background-color: transparent;
+  border: 0;
+  outline: none;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+
+.sec-main .calc {
+  margin: 60px auto 0;
+  width: 100%;
+  max-width: 300px;
+}
+.sec-main .calc .screen {
+  width: 99%;
+  min-height: 54px;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-size: 30px;
+  word-wrap: break-word;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgba(255, 255, 255, 0.9);
+  border: 0;
+  margin: 0.5%;
+  outline: none;
+  font-weight: 700;
+  padding: 10px;
+  text-align: right;
+}
+.sec-main .calc .keys {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.sec-main .calc .keys button {
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border: 0;
+  width: 24%;
+  padding: 10px;
+  margin: 0.5%;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  font-weight: 700;
+}
+.sec-main .calc .keys button:disabled {
+  cursor: auto;
+}
+.sec-main .calc .keys button.clear, .sec-main .calc .keys button.res {
+  width: 49%;
+}
+.sec-main .calc .keys button.res {
+  background-color: rgba(79, 224, 182, 0.5);
+  color: white;
+}
+
+body.js-dark {
+  background: #333;
+}
+body.js-clear {
+  background: #EEE;
+}
+body.js-clear .sec-navbar {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+body.js-clear .sec-navbar .bt {
+  color: rgba(0, 0, 0, 0.3);
+}
+body.js-clear .sec-main .screen {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.7);
+}
+body.js-clear .sec-main .keys button {
+  background-color: rgba(0, 0, 0, 0.1);
+  color: rgba(0, 0, 0, 0.4);
+}
+body.js-clear .sec-main .keys button.res {
+  background-color: rgba(79, 224, 182, 0.9);
+  color: white;
+}
+
+/*# sourceMappingURL=main.css.map */
