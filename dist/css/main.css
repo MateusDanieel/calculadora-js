@@ -83,8 +83,14 @@
   cursor: pointer;
   font-weight: 700;
 }
+.sec-main .calc .keys button:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
 .sec-main .calc .keys button:disabled {
   cursor: auto;
+}
+.sec-main .calc .keys button:disabled:hover {
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .sec-main .calc .keys button.clear, .sec-main .calc .keys button.result {
   width: 49%;
@@ -92,6 +98,9 @@
 .sec-main .calc .keys button.result {
   background-color: rgba(79, 224, 182, 0.5);
   color: white;
+}
+.sec-main .calc .keys button.result:hover {
+  background-color: rgba(79, 224, 182, 0.4);
 }
 
 body.js-dark {
@@ -117,9 +126,18 @@ body.js-clear .sec-main .keys button {
   background-color: rgba(0, 0, 0, 0.1);
   color: rgba(0, 0, 0, 0.4);
 }
+body.js-clear .sec-main .keys button:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+body.js-clear .sec-main .keys button:disabled:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
 body.js-clear .sec-main .keys button.result {
   background-color: rgba(79, 224, 182, 0.9);
   color: white;
+}
+body.js-clear .sec-main .keys button.result:hover {
+  background-color: rgba(79, 224, 182, 0.8);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -91,8 +91,16 @@
                 cursor: pointer;
                 font-weight: 700;
 
+                &:hover {
+                    background-color: rgba(#000, .6);
+                }
+
                 &:disabled {
                     cursor: auto;
+
+                    &:hover {
+                        background-color: rgba(#000, .3);
+                    }
                 }
 
                 &.clear, &.result {
@@ -107,6 +115,10 @@
                 &.result {
                     background-color: rgba(#4fe0b6, .5);
                     color:rgba(#FFF, 1);
+
+                    &:hover {
+                        background-color: rgba(#4fe0b6, .4);
+                    }
                 }
             }
         }
@@ -146,9 +158,23 @@ body {
                     background-color: rgba(#000, .1);
                     color:rgba(#000, .4);
 
+                    &:hover {
+                        background-color: rgba(#000, .2);
+                    }
+
+                    &:disabled {
+                        &:hover {
+                            background-color: rgba(#000, .1);
+                        }
+                    }
+
                     &.result {
                         background-color: rgba(#4fe0b6, .9);
                         color:rgba(#FFF, 1);
+
+                        &:hover {
+                            background-color: rgba(#4fe0b6, .8);
+                        }
                     }
                 }
             }

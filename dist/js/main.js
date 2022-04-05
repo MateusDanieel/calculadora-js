@@ -20,7 +20,7 @@
 (function() {
 
     let screen = document.querySelector('.sec-main .calc .screen');
-    let keys = document.querySelectorAll('.sec-main .calc .keys .nmr');
+    let keys = document.querySelectorAll('.sec-main .calc .keys button');
     let alert = document.querySelector('.sec-main .alert');
 
     document.addEventListener('keypress', (e)=> {
@@ -43,8 +43,32 @@
                 screen.innerHTML = '';
             }
         }
-        
-        
+    });
+
+    keys.forEach((el) => {
+        el.addEventListener('click', () => {
+            if(el.className == 'division') {
+                screen.innerHTML += '/';
+            } else if (el.innerHTML == 'C') {
+                screen.innerHTML = '';
+            } else if (el.innerHTML == ',') {
+                screen.innerHTML += '.';
+            } else if (el.innerHTML == '=') {
+                try {
+                    if(alert.getAttribute('style', 'display: block')) {
+                        alert.setAttribute('style', 'display: none;');
+                    }
+    
+                    const res = screen.innerHTML;
+                    screen.innerHTML = eval(res);
+                } catch {
+                    alert.setAttribute('style', 'display: block;');
+                    screen.innerHTML = '';
+                }
+            } else {
+                screen.innerHTML += el.innerHTML;
+            }
+        });
     });
     
 })();
